@@ -8,7 +8,7 @@
 		"sort",
 		"drag and drop"
 	],
-	"version": "1.0.0",
+	"version": "1.0.3",
 	"homepage": "https://github.com/pceuropa/yii2-sorting-items",
 	"type": "yii2-extension",
 	"license": "MIT",
