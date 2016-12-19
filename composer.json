@@ -1,0 +1,27 @@
+{
+	"name": "pceuropa/yii2-sort",
+	"description": "Sorting Drag Drop AJAX Save",
+	"keywords": [
+		"yii2",
+		"extension",
+		"ajax",
+		"sort",
+		"drag and drop",
+	],
+	"version": "1.0.0",
+	"homepage": "https://github.com/pceuropa/yii2-sorting-items",
+	"type": "yii2-extension",
+	"license": "MIT",
+	"minimum-stability": "dev",
+	"authors": [
+		{
+		  "name": "Rafal Marguzewicz",
+		  "email": "info@pceuropa.net",
+		}
+	],
+	"autoload": {
+		"psr-4": {
+		  "pceuropa\\sorting-ajax\\": ""
+		}
+	}
+}
