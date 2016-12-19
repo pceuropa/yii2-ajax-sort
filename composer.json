@@ -6,7 +6,7 @@
 		"extension",
 		"ajax",
 		"sort",
-		"drag and drop",
+		"drag and drop"
 	],
 	"version": "1.0.0",
 	"homepage": "https://github.com/pceuropa/yii2-sorting-items",
