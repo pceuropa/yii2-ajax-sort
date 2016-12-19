@@ -10,13 +10,13 @@ composer require pceuropa/yii2-sort
 ##Configure
 ```
 <php
-use pceuropa\sort\SortWidget;
+
+	use pceuropa\sort\SortWidget;
 ?>
 		
 			<?= SortWidget::widget([
-				'image_url' => Url::to('@banners', 'http'),
+				'image_url' => '',
 				'table' => '',
-    			'model' => $model,
 			]) ?>
 			
 ```		
@@ -27,7 +27,7 @@ public function actionIndex(){
 	$model = new ModelName;
 	$request = Yii::$app->request;
 	
-	if ($request->isAjax && $request->post('serialize'){
+	if ($request->isAjax && $request->post('serialize')){
 	
 		$array = $request->post('array');
 		

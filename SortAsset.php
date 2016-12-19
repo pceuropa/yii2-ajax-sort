@@ -1,5 +1,5 @@
 <?php 
-namespace pceuropa\menu;
+namespace pceuropa\sort;
 
 use yii\web\AssetBundle;
 

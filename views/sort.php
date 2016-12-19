@@ -1,9 +1,11 @@
 ﻿<?php 
+pceuropa\sort\SortAsset::register($this);
 use yii\helpers\Html;
 use yii\helpers\Url;
 
 $return = '';
 $el = '';
+
 foreach ($list as $item){
 
 	if ($item['image'] != null){
@@ -27,17 +29,17 @@ $row = 	'<div class="row">
 		
 }; //end foreach
 
-echo "<div id='baners_scrolls'></div><ul id='lista'>".$return."</ul></div>";
+echo "<div id='baners_scrolls'><ul id='lista'>".$return."</ul></div>";
 	
 
 $this->registerCss("
 	#baners_scrolls ul { margin: 0; padding: 0; list-style-type: none; }
 	#baners_scrolls ul li{ padding: 5px; border:solid 1px #ccc; cursor:grab;}
-	#baners_scrolls ul li:hover{ border:solid 1px #5CB85C;}
+	#baners_scrolls ul li:hover { border:solid 1px #5CB85C;}
 
 	#baners_scrolls ul li img{ max-height:75px; }
 
-	#baners_scrolls .big{
+	#baners_scrolls .big {
 		font-size:200%;
 		color:#eee;
 		margin-top:25px;
