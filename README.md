@@ -8,7 +8,18 @@ composer require pceuropa/yii2-sort
 ```
 
 ##Configure
-
+```
+<php
+use pceuropa\sort\SortWidget;
+?>
+		
+			<?= SortWidget::widget([
+				'image_url' => Url::to('@banners', 'http'),
+				'table' => '',
+    			'model' => $model,
+			]) ?>
+			
+```		
 ### Action code
 ```
 public function actionIndex(){

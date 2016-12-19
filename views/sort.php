@@ -27,7 +27,7 @@ $row = 	'<div class="row">
 		
 }; //end foreach
 
-echo "<ul id='lista'>".$return."</ul>";
+echo "<div id='baners_scrolls'></div><ul id='lista'>".$return."</ul></div>";
 	
 
 $this->registerCss("
