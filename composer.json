@@ -16,7 +16,7 @@
 	"authors": [
 		{
 		  "name": "Rafal Marguzewicz",
-		  "email": "info@pceuropa.net",
+		  "email": "info@pceuropa.net"
 		}
 	],
 	"autoload": {
