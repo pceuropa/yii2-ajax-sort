@@ -10,13 +10,12 @@ composer require pceuropa/yii2-sort
 ##Configure
 ```
 <php
-
 	use pceuropa\sort\SortWidget;
 ?>
 		
 			<?= SortWidget::widget([
-				'image_url' => '',
-				'table' => '',
+				'image_url' => '',  // example Url::to('@www', 'http'),
+				'data' => $model::find()->orderBy(['serialize' => SORT_ASC])->all(),
 			]) ?>
 			
 ```		
