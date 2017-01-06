@@ -33,15 +33,8 @@ class SortWidget extends \yii\base\Widget{
 		}
 	
 	public function renderWidget(){
-	
 		return $this->render('sort' , ['list' => $this->data, 'config' => $this->config]);
 	
-	}
-	
-	public function findAll(){
-		
-		$array =  Yii::$app->db->createCommand('SELECT * FROM '.$table.' ORDER BY `serialize` ASC')->queryAll();
-		return $array;
 	}
 	
 }

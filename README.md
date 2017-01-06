@@ -4,7 +4,7 @@ Sorting items -> Drag Drop -> AJAX -> Save
 ## Instalation
 
 ```
-composer require pceuropa/yii2-sort
+composer require pceuropa/yii2-ajax-sort
 ```
 
 ##Configure

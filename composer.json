@@ -1,5 +1,5 @@
 {
-	"name": "pceuropa/yii2-sort",
+	"name": "pceuropa/yii2-ajax-sort",
 	"description": "Sorting items -> Drag Drop -> AJAX -> Save",
 	"keywords": [
 		"yii2",
@@ -10,7 +10,7 @@
 		"drag and drop"
 	],
 	"version": "1.0.5",
-	"homepage": "http://pceuropa.dev/yii2-extensions/yii2-sort",
+	"homepage": "http://pceuropa.dev/yii2-extensions/yii2-ajax-sort",
 	"type": "yii2-extension",
 	"license": "MIT",
 	"minimum-stability": "dev",
