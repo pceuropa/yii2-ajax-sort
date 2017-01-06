@@ -1,5 +1,5 @@
 # yii2-sort
-Sorting Drag Drop AJAX Save
+Sorting items -> Drag Drop -> AJAX -> Save
 
 ## Instalation
 
@@ -11,11 +11,12 @@ composer require pceuropa/yii2-sort
 ```
 <php
 	use pceuropa\sort\SortWidget;
+	$data = $model::find()->orderBy(['serialize' => SORT_ASC])->all();
 ?>
 		
 			<?= SortWidget::widget([
 				'image_url' => '',  // example Url::to('@www', 'http'),
-				'data' => $model::find()->orderBy(['serialize' => SORT_ASC])->all(),
+				'data' => $data,  // ['']
 			]) ?>
 			
 ```		
