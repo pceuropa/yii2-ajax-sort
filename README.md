@@ -21,4 +21,4 @@ echo SortWidget::widget([
 ]); 
 			
 ```		
-[Demo and more info](http://pceuropa.dev/yii2-extensions/yii2-ajax-sort)
+[Demo and more info](http://pceuropa.net/yii2-extensions/yii2-ajax-sort)
