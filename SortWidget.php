@@ -1,13 +1,15 @@
 <?php
+# @Copyright 2017 Rafal Marguzewicz pceuropa.net
+
 namespace pceuropa\sort;
 
 use Yii;
 class SortWidget extends \yii\base\Widget{
 
-	public $config;
-	public $image_url;
+	public $config = [];
+	public $image_url = '';
+	public $controller = 'document.URL';
 	public $data;
-	public $table;
 
 	public function init(){
 			parent::init();
@@ -18,13 +20,17 @@ class SortWidget extends \yii\base\Widget{
 			
 			if ($this->data === null){
 				$this->data = [
-					['id' => 1, 'name' => 'no data', 'url' => '', 'image' => ''],
-					['id' => 2, 'name' => 'default data', 'url' => '', 'image' => '']
+					['id' => 1, 'image_name' => 'no data'],
+					['id' => 2, 'image_name' => 'default data']
 				];
 			}
 			
+			if ($this->controller === null && $this->controller === ''){
+				$this->controller = 'document.URL';
+			}
 			$this->config = [
-				'image_url' => $this->image_url
+				'image_url' => $this->image_url,
+				'controller' => $this->controller,
 			];
 		}
 	
@@ -33,7 +39,7 @@ class SortWidget extends \yii\base\Widget{
 		}
 	
 	public function renderWidget(){
-		return $this->render('sort' , ['list' => $this->data, 'config' => $this->config]);
+		return $this->render('sort' , ['items' => $this->data, 'config' => $this->config]);
 	
 	}
 	

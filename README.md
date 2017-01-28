@@ -1,44 +1,24 @@
-# yii2-sort
+# yii2-ajax-sort
 Sorting items -> Drag Drop -> AJAX -> Save
 
 ## Instalation
 
 ```
-composer require pceuropa/yii2-ajax-sort
+composer require pceuropa/yii2-ajax-sort dev-master
 ```
 
 ##Configure
 ```
-<php
-	use pceuropa\sort\SortWidget;
-	$data = $model::find()->orderBy(['serialize' => SORT_ASC])->all();
-?>
-		
-			<?= SortWidget::widget([
-				'image_url' => '',  // example Url::to('@www', 'http'),
-				'data' => $data,  // ['']
-			]) ?>
+use pceuropa\sort\SortWidget;
+
+echo SortWidget::widget([
+	'image_url' => Url::to('@web/images/'),
+	'data' => [
+		['id' => 1, 'image_name'  => 'firefox.jpg', 'title' => 'text alternative'],
+		['id' => 2, 'image_name'  => 'opera.jpg'],
+		['id' => 6, 'title'  => 'text element', 'url' => 'https://'],
+	], 
+]); 
 			
 ```		
-### Action code
-```
-public function actionIndex(){
-    
-	$model = new ModelName;
-	$request = Yii::$app->request;
-	
-	if ($request->isAjax && $request->post('serialize')){
-	
-		$array = $request->post('array');
-		
-		foreach ($array as $key => $val){
-			$m = $this->findModel($val);
-			$m->serialize = $key;
-			$m->save();
-		}
-	return  \yii\helpers\Json::encode(['success' => true,]);
-	}
-}
-```
-
-## Usage
+[Yii2 sort list widget Demo and info](http://pceuropa.net/yii2-extensions/yii2-ajax-sort)

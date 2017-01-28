@@ -1,6 +1,5 @@
 <?php 
 namespace pceuropa\sort;
-
 use yii\web\AssetBundle;
 
 class SortAsset extends AssetBundle{
