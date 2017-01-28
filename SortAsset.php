@@ -1,9 +1,8 @@
 <?php 
 namespace pceuropa\sort;
-use yii\web\AssetBundle;
 
-class SortAsset extends AssetBundle{
-    public $sourcePath = '@vendor/pceuropa/yii2-sort/assets';
+class SortAsset extends \yii\web\AssetBundle {
+    public $sourcePath = '@vendor/pceuropa/yii2-ajax-sort/assets';
     public $baseUrl = '@web';
     public $js = [
         'js/Sortable.min.js',
