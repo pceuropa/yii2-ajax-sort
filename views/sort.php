@@ -12,11 +12,11 @@ $el = '';
 
 #print_r($items);die();
 foreach ($items as $item){
-	if (isset($item['image_name']) ){
+	if (isset($item['image']) ){
 	
-		$el = Html::img( $config['image_url']  .$item['image_name'], ['class' => 'img-responsive', 'alt' => isset($item['title']) ? $item['title'] : '']);
+		$el = Html::img( $config['image_url']  .$item['image'], ['class' => 'img-responsive', 'alt' => isset($item['name']) ? $item['name'] : '']);
 	} else {
-		$el = Html::a ( $item['title'], $item['url'] );
+		$el = Html::a ( $item['name'], $item['url'] );
 	}
 			
 $row = 	'<div class="row">
