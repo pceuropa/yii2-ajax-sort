@@ -1,7 +1,4 @@
 ﻿<?php 
-
-# @Copyright 2017 Rafal Marguzewicz pceuropa.net
- 
 pceuropa\sort\SortAsset::register($this);
 use yii\helpers\Html;
 use yii\helpers\Url;
@@ -9,12 +6,10 @@ use yii\helpers\Url;
 $return = '';
 $el = '';
 
+foreach ($list as $item){
 
-#print_r($items);die();
-foreach ($items as $item){
-	if (isset($item['image']) ){
-	
-		$el = Html::img( $config['image_url']  .$item['image'], ['class' => 'img-responsive', 'alt' => isset($item['name']) ? $item['name'] : '']);
+	if ($item['image'] != null){
+		$el = Html::img( $config['image_url']  .$item['image'], ['class' => 'img-responsive', 'alt' => $item['name']]);
 	} else {
 		$el = Html::a ( $item['name'], $item['url'] );
 	}
@@ -49,24 +44,20 @@ $this->registerCss("
 	 
 $this->registerJs('var config = {
 	group: "pclista",
+	animation: 0,
 	ghostClass: "ghost",
 	onUpdate: function () {
-		var a = [], data = {};
+		var a = [];
 	
-		$("#lista li").each(function (){ a.push($(this)[0].id) });
-		data = { serialize: true, array: a };
-	    
+		$("#lista li").each(function (){ a.push($(this)[0].id) }) 
+	
 		$.ajax({
-		  url: '.$config["controller"].',
+		  url: document.URL,
 		  type: "post",
 		  dataType:"JSON",
-		  data: data,
-		  success: function (response) {
-					if (response.success === false) {console.log(response);}
-					if (response.success === true) {
-					$("#message_request").text(JSON.stringify(data, null, 4));
-					$("#message_response").text(JSON.stringify(response, null, 4));
-					console.log(response);}
+		  data: { serialize: true, array: a },
+		  success: function (r) {
+					if (r.success === false) {console.log(r.message);}
 				},
 			error: function (XMLHttpRequest, textStatus, errorThrown) {
 				alert(textStatus);
